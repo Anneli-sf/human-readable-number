@@ -1,5 +1,5 @@
 module.exports = function toReadable (number) {
-    function toReadable (number) {
+   
         let arrUnits = {
             0 : ' ', 1 : 'one', 2 : 'two', 3 : 'three', 4 : 'four', 5 : 'five', 6 : 'six', 7 : 'seven', 8 : 'eight', 9 : 'nine',};
         let arrDozens = {10 : 'ten', 20 : 'twenty', 30 : 'thirty', 40 : 'forty', 50 : 'fifty', 60 : 'sixty', 70 : 'seventy', 80 : 'eighty', 90 : 'ninety',};
@@ -13,9 +13,9 @@ module.exports = function toReadable (number) {
           return numberHR = arrUnits[number];
         }
     
-        // if (number === 10) {
-        //     return numberHR = arrDozens[number];
-        //   }
+        if (number === 10) {
+             return numberHR = arrDozens[number];
+          }
     
         if (number >= 11 && number <= 19 ) {
           return numberHR = arrTwoDigit[number];
@@ -44,5 +44,5 @@ module.exports = function toReadable (number) {
               return numberHR = arrUnits[Math.floor(number/100)] + ' ' + 'hundred' + ' ' + arrDozens[(number%100)-(number%10)] + ' ' + arrUnits[number%10];
         }
     }
-}
+
 
