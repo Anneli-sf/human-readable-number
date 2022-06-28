@@ -24,7 +24,7 @@ module.exports = function toReadable (number) {
     return readableN = `${numbersArray[0][firstNumber]} hundred ${numbersArray[0][number % 100]}`;
   else if (number >= 100 && number % 100 >= 20 && lastNumber != 0)   
     return readableN = `${numbersArray[0][firstNumber]} hundred ${numbersArray[1][secondNumber]} ${numbersArray[0][lastNumber]}`;
-  else return readableN = `${numbersArray[0][firstNumber]} hundred ${numbersArray[1][secondNumber]} `;
+  else return readableN = `${numbersArray[0][firstNumber]} hundred ${numbersArray[1][secondNumber]}`;
     
     }
 
